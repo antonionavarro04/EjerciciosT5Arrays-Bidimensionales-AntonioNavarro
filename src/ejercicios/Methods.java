@@ -26,19 +26,19 @@ public class Methods {
     } public static int[][] fillArrayRandom(int array[][]) { // * 0 o 1
         for (int fila = 0; fila < array.length; fila++) {
             for (int columna = 0; columna < array[0].length; columna++) {
-                array[fila][columna] = (int) (Math.random() + 1);
+                array[fila][columna] = (int) (Math.random() + 0.5d);
             }
         } return array;
     } public static int[][] fillArrayRandom(int array[][], int max) { // * 0 a max
         for (int fila = 0; fila < array.length; fila++) {
             for (int columna = 0; columna < array[0].length; columna++) {
-                array[fila][columna] = (int) (Math.random() * max + 1);
+                array[fila][columna] = (int) (Math.random() * max + 0.5d);
             }
         } return array;
     } public static int[][] fillArrayRandom(int array[][], int max, int min) { // * min a max
         for (int fila = 0; fila < array.length; fila++) {
             for (int columna = 0; columna < array[0].length; columna++) {
-                array[fila][columna] = (int) (Math.random() * (max - min) + min + 1);
+                array[fila][columna] = (int) (Math.random() * (max - min) + min + 0.5d);
             }
         } return array;
     }
