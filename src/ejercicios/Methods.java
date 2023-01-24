@@ -2,7 +2,13 @@ package ejercicios;
 
 public class Methods {
     // ! Print
-    public static void printArray(int array[][]) {
+    public static void printArray(String array[][]) {
+        for (int fila = 0; fila < array.length; fila++) {
+            for (int columna = 0; columna < array[0].length; columna++) {
+                System.out.print(array[fila][columna] + " ");
+            } System.out.println();
+        }
+    } public static void printArray(int array[][]) {
         for (int fila = 0; fila < array.length; fila++) {
             for (int columna = 0; columna < array[0].length; columna++) {
                 System.out.print(array[fila][columna] + " ");
@@ -17,5 +23,5 @@ public class Methods {
                 array[fila][columna] = number;
             }
         } return array;
-    }
+    } 
 } // € Hecho por Antonio Navarro
