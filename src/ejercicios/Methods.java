@@ -17,7 +17,7 @@ public class Methods {
     }
 
     // ! Fill
-    public static int[][] fillArray(int array[][], int number) {
+    public static int[][] fillArray(int array[][], int number) { // * número fijo
         for (int fila = 0; fila < array.length; fila++) {
             for (int columna = 0; columna < array[0].length; columna++) {
                 array[fila][columna] = number;
