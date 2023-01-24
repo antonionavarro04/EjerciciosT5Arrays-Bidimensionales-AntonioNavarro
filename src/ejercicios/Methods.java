@@ -60,7 +60,6 @@ public class Methods {
     }
 
     // ! Coordenadas
-    // ! Recorremos el array en busca del número máximo y mínimo
     public static int[] coordenadasMaximo(int array[][]) {
         int numeroMaximo = array[0][0];
         int[] posicionesMaximo = new int[2];
@@ -105,5 +104,21 @@ public class Methods {
                 }
             }
         } return posicionesMaximoYMinimo;
+    } public static void printCords(int[] array) {
+        System.out.print("[");
+        if (array.length == 0) {
+            System.out.print("EMPTY");
+        } else {
+            for (int pos = 0; pos < array.length; pos++) {
+                if (pos == 0) {
+                    System.out.print("y = ");
+                } else {
+                    System.out.print("x = ");
+                } System.out.print(array[pos]);
+                if (pos != array.length - 1) {
+                    System.out.print(", ");
+                }
+            }
+        } System.out.print("]"); System.out.println();
     }
 } // € Hecho por Antonio Navarro
