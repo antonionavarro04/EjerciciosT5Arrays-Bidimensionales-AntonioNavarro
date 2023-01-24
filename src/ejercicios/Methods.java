@@ -39,6 +39,13 @@ public class Methods {
                 array[fila][columna] = number;
             }
         } return array;
+    } public static int[][] fillArray(int array[][], int number, int incremento) { // * número fijo
+        for (int fila = 0; fila < array.length; fila++) {
+            for (int columna = 0; columna < array[0].length; columna++) {
+                array[fila][columna] = number;
+                number += incremento;
+            }
+        } return array;
     } public static int[][] fillArrayRandom(int array[][]) { // * 0 o 1
         for (int fila = 0; fila < array.length; fila++) {
             for (int columna = 0; columna < array[0].length; columna++) {
