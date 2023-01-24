@@ -58,4 +58,52 @@ public class Methods {
             }
         } return array;
     }
+
+    // ! Coordenadas
+    // ! Recorremos el array en busca del número máximo y mínimo
+    public static int[] coordenadasMaximo(int array[][]) {
+        int numeroMaximo = array[0][0];
+        int[] posicionesMaximo = new int[2];
+
+        for (int filas = 0; filas < array.length; filas++) {
+            for (int columnas = 0; columnas < array[0].length; columnas++) {
+                if (array[filas][columnas] > numeroMaximo) {
+                    numeroMaximo = array[filas][columnas];
+                    posicionesMaximo[0] = filas;
+                    posicionesMaximo[1] = columnas;
+                }
+            }
+        } return posicionesMaximo;
+    } public static int[] coordenadasMinimo(int array[][]) {
+        int numeroMinimo = array[0][0];
+        int[] posicionesMinimo = new int[2];
+
+        for (int filas = 0; filas < array.length; filas++) {
+            for (int columnas = 0; columnas < array[0].length; columnas++) {
+                if (array[filas][columnas] < numeroMinimo) {
+                    numeroMinimo = array[filas][columnas];
+                    posicionesMinimo[0] = filas;
+                    posicionesMinimo[1] = columnas;
+                }
+            }
+        } return posicionesMinimo;
+    } public static int[] coordenadasMaximoYMinimo(int array[][]) { // * Devuelve las coordenadas a la vez por lo que habrá que descomprimirlo en cada array correspondiente, siendo [0] u [1] el máximo y [2] o [3] el mínimo
+        int numeroMaximo = array[0][0];
+        int numeroMinimo = array[0][0];
+        int[] posicionesMaximoYMinimo = new int[4];
+
+        for (int filas = 0; filas < array.length; filas++) {
+            for (int columnas = 0; columnas < array[0].length; columnas++) {
+                if (array[filas][columnas] > numeroMaximo) {
+                    numeroMaximo = array[filas][columnas];
+                    posicionesMaximoYMinimo[0] = filas;
+                    posicionesMaximoYMinimo[1] = columnas;
+                } if (array[filas][columnas] < numeroMinimo) {
+                    numeroMinimo = array[filas][columnas];
+                    posicionesMaximoYMinimo[2] = filas;
+                    posicionesMaximoYMinimo[3] = columnas;
+                }
+            }
+        } return posicionesMaximoYMinimo;
+    }
 } // € Hecho por Antonio Navarro
