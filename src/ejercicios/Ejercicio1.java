@@ -8,7 +8,7 @@ public class Ejercicio1 {
         // ! Rellenamos el array con la formula array[n][m] = 10 * n + m
         for (int fila = 0; fila < array.length; fila++) {
             for (int columna = 0; columna < array[0].length; columna++) {
-                array[fila][columna] = (10 * fila + columna);
+                array[fila][columna] = 10 * fila + columna;
             }
         }
 
