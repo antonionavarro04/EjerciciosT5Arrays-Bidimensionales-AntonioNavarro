@@ -2,6 +2,22 @@ package ejercicios;
 
 public class Methods {
     // ! Print
+    // = 1d
+    public static void printArray(int[] array) {
+        System.out.print("[");
+        if (array.length == 0) {
+            System.out.print("EMPTY");
+        } else {
+            for (int pos = 0; pos < array.length; pos++) {
+                System.out.print(array[pos]);
+                if (pos != array.length - 1) {
+                    System.out.print(", ");
+                }
+            }
+        } System.out.print("]"); System.out.println();
+    }
+
+    // = 2d
     public static void printArray(String array[][]) {
         for (int fila = 0; fila < array.length; fila++) {
             for (int columna = 0; columna < array[0].length; columna++) {
