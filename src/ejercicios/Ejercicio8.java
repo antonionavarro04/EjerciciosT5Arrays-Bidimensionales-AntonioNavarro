@@ -3,10 +3,10 @@ package ejercicios;
 public class Ejercicio8 {
     public static void main(String[] args) {
         // ^ Definimos una matriz de 5x5
-        int array[][] = new int[2][2];
+        int array[][] = new int[5][5];
 
         // ! Rellenamos la matriz con números aleatorios entre 1 y 10
-        Methods.fillArrayRandom(array, 1, 10);
+        Methods.fillArrayRandom(array, 10, 1);
 
         // ! Comprobamos si la matriz es simétrica
         boolean simmetrical = Methods.simmetrical(array);
