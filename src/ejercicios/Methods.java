@@ -1,5 +1,8 @@
 package ejercicios;
 
+// ? Importamos la Clase
+import java.util.Arrays;
+
 public class Methods {
     // ! Print
     // = 1d
@@ -127,5 +130,32 @@ public class Methods {
                 }
             }
         } System.out.print("]"); System.out.println();
+    }
+
+    // ! Transponer Arrays
+    public static int[][] transponerArray(int[][] arrayOriginal, int[][] arrayFinal) { // * Necesita de un array auxiliar
+        for (int filas = 0; filas < arrayOriginal.length; filas++) {
+            for (int columnas = 0; columnas < arrayOriginal[0].length; columnas++) {
+                arrayFinal[columnas][filas] = arrayOriginal[filas][columnas];
+            }
+        } return arrayFinal;
+    } public static int[][] transponerArray(int[][] array) { // * No necesita de un array auxiliar pero probablemente tenga mas carga de procesador
+        int numeros[] = new int[array[0].length - 1];
+        int copiarEnFila = 0;
+        for (int filas = 0; filas < array.length; filas++) {
+            int posNumeros = 0;
+            for (int columnas = filas ; columnas < array[0].length; columnas++) {
+                if (columnas != filas) {
+                    numeros[posNumeros] = array[columnas][filas]; posNumeros++;
+                    array[columnas][filas] = array[filas][columnas];
+                }
+            } posNumeros = 0;
+            for (int columnas = numeros.length * -1 + array[0].length; columnas < array[0].length; columnas++) {
+                array[copiarEnFila][columnas] = numeros[posNumeros]; posNumeros++;
+            } copiarEnFila++;
+            if (numeros.length != 0) {
+                numeros = Arrays.copyOf(numeros, numeros.length - 1);
+            }
+        } return array;
     }
 } // € Hecho por Antonio Navarro
