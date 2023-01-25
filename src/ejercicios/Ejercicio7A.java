@@ -16,5 +16,5 @@ public class Ejercicio7A {
 
         // ? Mostramos el array transpuesto
         Methods.printArray(aux);
-    }
+    } // € Con array Auxiliar
 } // € Hecho por Antonio Navarro
