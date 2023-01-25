@@ -23,4 +23,4 @@ public class Ejercicio6 {
         System.out.print("Coordenadas del número máximo: "); Methods.printCords(posicionesMaximo);
         System.out.print("Coordenadas del número mínimo: "); Methods.printCords(posicionesMinimo);
     }
-}
+} // € Hechop por Antonio Navarro

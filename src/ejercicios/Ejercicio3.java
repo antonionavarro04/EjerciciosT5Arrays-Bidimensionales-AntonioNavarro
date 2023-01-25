@@ -76,4 +76,4 @@ public class Ejercicio3 {
         System.out.println("La nota máxima fue " + notaMaxima);
         System.out.println("La nota media fue " + notaMedia);
     }
-}
+} // € Hecho por Antonio Navarro
