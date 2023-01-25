@@ -144,7 +144,7 @@ public class Methods {
         int copiarEnFila = 0;
         for (int filas = 0; filas < array.length; filas++) {
             int posNumeros = 0;
-            for (int columnas = filas ; columnas < array[0].length; columnas++) {
+            for (int columnas = filas; columnas < array[0].length; columnas++) {
                 if (columnas != filas) {
                     numeros[posNumeros] = array[columnas][filas]; posNumeros++;
                     array[columnas][filas] = array[filas][columnas];
