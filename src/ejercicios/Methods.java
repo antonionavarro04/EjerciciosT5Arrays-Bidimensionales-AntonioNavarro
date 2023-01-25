@@ -158,4 +158,19 @@ public class Methods {
             }
         } return array;
     }
+
+    // ! Comprobar si es simétrica
+    public static boolean simmetrical(int[][] array) {
+        boolean simmetric = true;
+        for (int filas = 0; filas < array.length; filas++) {
+            for (int columnas = 0; columnas < array[0].length; columnas++) {
+                if (array[filas][columnas] != array[columnas][filas]) {
+                    simmetric = false;
+                    break;
+                }
+            } if (!simmetric) {
+                break;
+            }
+        } return simmetric;
+    }
 } // € Hecho por Antonio Navarro
