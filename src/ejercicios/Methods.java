@@ -187,4 +187,18 @@ public class Methods {
             }
         } return simmetric;
     }
+
+    // ! Bubble Sort
+    public static int[] sortBubble(int[] array) { // * Mi implementación del Bubble Sort, solo estaba probando
+        int aux;
+        for (int pos = 0; pos < array.length; pos++) {
+            for (int posActual = 0; posActual < array.length - 1; posActual++) {
+                if (array[posActual] > array[posActual + 1]) {
+                    aux = array[posActual];
+                    array[posActual] = array[posActual + 1];
+                    array[posActual + 1] = aux;
+                }
+            }
+        } return array;
+    }
 } // € Hecho por Antonio Navarro
