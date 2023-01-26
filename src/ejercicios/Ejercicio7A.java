@@ -7,14 +7,11 @@ public class Ejercicio7A {
 
         // ! Rellenamos el array con números del 1 al 16
         Methods.fillArray(array, 1, 1);
-
-        // ! Definimos un array de las mismas posiciones
-        int aux[][] = new int[array.length][array[0].length];
         
         // ! Llamamos al método creado para tranponer números, la idea es copiar así: final[j][i] = principal[i][j]
-        Methods.transponerArray(array, aux);
+        array = Methods.transponerArrayMatrizAuxiliar(array);
 
         // ? Mostramos el array transpuesto
-        Methods.printArray(aux);
+        Methods.printArray(array);
     } // € Con array Auxiliar
 } // € Hecho por Antonio Navarro

@@ -133,13 +133,14 @@ public class Methods {
     }
 
     // ! Transponer Arrays
-    public static int[][] transponerArray(int[][] arrayOriginal, int[][] arrayFinal) { // * Necesita de un array auxiliar
+    public static int[][] transponerArrayMatrizAuxiliar(int[][] arrayOriginal) { // * Necesita de una matriz auxiliar
+        int arrayFinal[][] = new int[arrayOriginal.length][arrayOriginal[0].length];
         for (int filas = 0; filas < arrayOriginal.length; filas++) {
             for (int columnas = 0; columnas < arrayOriginal[0].length; columnas++) {
                 arrayFinal[columnas][filas] = arrayOriginal[filas][columnas];
             }
         } return arrayFinal;
-    } public static int[][] transponerArray(int[][] array) { // * No necesita de un array auxiliar pero probablemente tenga mas carga de procesador
+    } public static int[][] transponerArrayArrayAuxiliar(int[][] array) { // * No necesita de una matriz auxiliar, solo se necesita un array auxiliar
         int numeros[] = new int[array[0].length - 1];
         int copiarEnFila = 0;
         for (int filas = 0; filas < array.length; filas++) {
@@ -155,6 +156,19 @@ public class Methods {
             } copiarEnFila++;
             if (numeros.length != 0) {
                 numeros = Arrays.copyOf(numeros, numeros.length - 1);
+            }
+        } return array;
+    }
+
+    public static int[][] transponerArray(int array[][]) { // * Solo necesita una variable auxiliar
+        int aux;
+        for (int filas = 0; filas < array.length; filas++) {
+            for (int columnas = filas; columnas < array[0].length; columnas++) {
+                if (columnas != filas) {
+                    aux = array[columnas][filas];
+                    array[columnas][filas] = array [filas][columnas];
+                    array[filas][columnas] = aux;
+                }
             }
         } return array;
     }

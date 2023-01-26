@@ -13,5 +13,5 @@ public class Ejercicio7B {
 
         // ? Mostramos el array transpuesto
         Methods.printArray(array);
-    } // € Sin Array Auxiliar
+    } // € Sin Array ni Matriz Auxiliar
 } // € Hecho por Antonio Navarro
