@@ -4,6 +4,15 @@ package ejercicios;
 import java.util.Arrays;
 
 public class Methods {
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+    
     // ! Print
     // = 1d
     public static void printArray(int[] array) {
@@ -33,6 +42,35 @@ public class Methods {
                 System.out.print(array[fila][columna] + " ");
             } System.out.println();
         }
+    }
+
+    // = 3d
+    public static void printArray(int array[][][]) {
+        for (int profundidad = 0; profundidad < array.length; profundidad++) {
+            System.out.printf("Capa %s:\n", profundidad);
+            for (int filas = 0; filas < array[0].length; filas++) {
+                for (int columnas = 0; columnas < array[0][0].length; columnas++) {
+                    System.out.print(array[profundidad][filas][columnas] + " ");
+                }
+                System.out.println();
+            } System.out.println();
+        }
+    }
+
+    // = 4d
+    public static void printArray(int array[][][][]) {
+        for (int momento = 0; momento < array.length; momento++) {
+            System.out.printf("Momento %s:\n", momento);
+            for (int profundidad = 0; profundidad < array[0].length; profundidad++) {
+                System.out.printf("Capa %s:\n", profundidad);
+                for (int filas = 0; filas < array[0][0].length; filas++) {
+                    for (int columnas = 0; columnas < array[0][0][0].length; columnas++) {
+                        System.out.print(array[momento][profundidad][filas][columnas] + " ");
+                    }
+                    System.out.println();
+                } System.out.println();
+            } System.out.println();
+        } System.out.println();
     }
 
     // ! Fill
@@ -189,14 +227,31 @@ public class Methods {
     }
 
     // ! Bubble Sort
-    public static int[] sortBubble(int[] array) { // * Mi implementación del Bubble Sort, solo estaba probando
+    public static int[] sortBubble(int[] array, boolean inverse, boolean visual) { // * Mi implementación del Bubble Sort, solo estaba probando
         int aux;
         for (int pos = 0; pos < array.length; pos++) {
             for (int posActual = 0; posActual < array.length - 1; posActual++) {
-                if (array[posActual] > array[posActual + 1]) {
-                    aux = array[posActual];
-                    array[posActual] = array[posActual + 1];
-                    array[posActual + 1] = aux;
+                if (inverse) {
+                    if (array[posActual] < array[posActual + 1]) {
+                        aux = array[posActual];
+                        array[posActual] = array[posActual + 1];
+                        array[posActual + 1] = aux;
+                    }
+                } else if (!inverse) {
+                    if (array[posActual] > array[posActual + 1]) {
+                        aux = array[posActual];
+                        array[posActual] = array[posActual + 1];
+                        array[posActual + 1] = aux;
+                    }
+                } if (visual) {
+                    System.out.print("\033[H\033[2J");  
+                    System.out.flush();
+                    printArray(array);
+                    try {
+                        Thread.sleep(100);
+                    } catch (InterruptedException e) {
+                        System.err.printf("Error: %s\n", e);
+                    }
                 }
             }
         } return array;
