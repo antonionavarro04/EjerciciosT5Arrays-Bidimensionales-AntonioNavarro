@@ -4,14 +4,14 @@ package ejercicios;
 import java.util.Arrays;
 
 public class Methods {
-    public static final String ANSI_BLACK = "\u001B[30m";
-    public static final String ANSI_RED = "\u001B[31m";
-    public static final String ANSI_GREEN = "\u001B[32m";
-    public static final String ANSI_YELLOW = "\u001B[33m";
-    public static final String ANSI_BLUE = "\u001B[34m";
-    public static final String ANSI_PURPLE = "\u001B[35m";
-    public static final String ANSI_CYAN = "\u001B[36m";
-    public static final String ANSI_WHITE = "\u001B[37m";
+    private static final String ANSI_BLACK = "\u001B[30m";
+    private static final String ANSI_RED = "\u001B[31m";
+    private static final String ANSI_GREEN = "\u001B[32m";
+    private static final String ANSI_YELLOW = "\u001B[33m";
+    private static final String ANSI_BLUE = "\u001B[34m";
+    private static final String ANSI_PURPLE = "\u001B[35m";
+    private static final String ANSI_CYAN = "\u001B[36m";
+    private static final String ANSI_WHITE = "\u001B[37m";
     
     // ! Print
     // = 1d
@@ -48,9 +48,9 @@ public class Methods {
     public static void printArray(int array[][][]) {
         for (int profundidad = 0; profundidad < array.length; profundidad++) {
             System.out.printf("Capa %s:\n", profundidad);
-            for (int filas = 0; filas < array[0].length; filas++) {
-                for (int columnas = 0; columnas < array[0][0].length; columnas++) {
-                    System.out.print(array[profundidad][filas][columnas] + " ");
+            for (int fila = 0; fila < array[0].length; fila++) {
+                for (int columna = 0; columna < array[0][0].length; columna++) {
+                    System.out.print(array[profundidad][fila][columna] + " ");
                 }
                 System.out.println();
             } System.out.println();
@@ -63,9 +63,9 @@ public class Methods {
             System.out.printf("Momento %s:\n", momento);
             for (int profundidad = 0; profundidad < array[0].length; profundidad++) {
                 System.out.printf("Capa %s:\n", profundidad);
-                for (int filas = 0; filas < array[0][0].length; filas++) {
+                for (int fila = 0; fila < array[0][0].length; fila++) {
                     for (int columnas = 0; columnas < array[0][0][0].length; columnas++) {
-                        System.out.print(array[momento][profundidad][filas][columnas] + " ");
+                        System.out.print(array[momento][profundidad][fila][columnas] + " ");
                     }
                     System.out.println();
                 } System.out.println();
