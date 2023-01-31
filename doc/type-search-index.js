@@ -1,0 +1,1 @@
+typeSearchIndex = [{"l":"All Classes and Interfaces","u":"allclasses-index.html"},{"p":"preparacionexamen","l":"Array"},{"p":"preparacionexamen","l":"AuxiliaryMain"},{"p":"preparacionexamen","l":"Mathematics"},{"p":"preparacionexamen","l":"PerArrays"}];updateSearchResults();

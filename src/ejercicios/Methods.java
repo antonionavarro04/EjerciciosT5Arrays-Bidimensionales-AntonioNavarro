@@ -4,15 +4,6 @@ package ejercicios;
 import java.util.Arrays;
 
 public class Methods {
-    private static final String ANSI_BLACK = "\u001B[30m";
-    private static final String ANSI_RED = "\u001B[31m";
-    private static final String ANSI_GREEN = "\u001B[32m";
-    private static final String ANSI_YELLOW = "\u001B[33m";
-    private static final String ANSI_BLUE = "\u001B[34m";
-    private static final String ANSI_PURPLE = "\u001B[35m";
-    private static final String ANSI_CYAN = "\u001B[36m";
-    private static final String ANSI_WHITE = "\u001B[37m";
-    
     // ! Print
     // = 1d
     public static void printArray(int[] array) {
@@ -237,7 +228,7 @@ public class Methods {
                         array[posActual] = array[posActual + 1];
                         array[posActual + 1] = aux;
                     }
-                } else if (!inverse) {
+                } else {
                     if (array[posActual] > array[posActual + 1]) {
                         aux = array[posActual];
                         array[posActual] = array[posActual + 1];
