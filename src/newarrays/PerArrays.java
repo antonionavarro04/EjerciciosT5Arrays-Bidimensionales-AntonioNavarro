@@ -13,7 +13,7 @@ import java.util.Locale;
  * Esta orientada a su uso en el examen del Tema 5 de programación
  * Falta por implementar el rellenado de arrays[][]
  * @author Antonio Navarro
- * @version Beta 1.0
+ * @version Beta 1.1
  * @see java.lang.System
  * @see java.util.Arrays
  * @see java.lang.Math
@@ -676,6 +676,7 @@ public class PerArrays {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[0].length; j++) {
                 a[i][j] = n;
+                n += in;
             }
         } return a;
     }
@@ -691,6 +692,7 @@ public class PerArrays {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[0].length; j++) {
                 a[i][j] = n;
+                n += in;
             }
         } return a;
     }
@@ -706,6 +708,7 @@ public class PerArrays {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[0].length; j++) {
                 a[i][j] = n;
+                n += in;
             }
         } return a;
     }
@@ -721,6 +724,7 @@ public class PerArrays {
         for (int i = 0; i < a.length; i++) {
             for (int j = 0; j < a[0].length; j++) {
                 a[i][j] = n;
+                n += in;
             }
         } return a;
     }
